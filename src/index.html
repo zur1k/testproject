@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>тест</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <form class="form__items">
+      <div class="form__item form-location__items">
+        <label class="form__title">Место или название отеля</label>
+        <!-- location -->
+        <div class="form-input__wrapper form-input__wrapper--location">
+          <input class="form__location geo" type="text" name="location" placeholder="Введите здесь место" />
+        </div>
+      </div>
+
+      <!-- date -->
+      <div class="form__item form-date__items">
+        <div class="form-date__item">
+          <label class="form-date__title form__title" for="datepicker-from">Заезд</label>
+          <div class="form-input__wrapper dot">
+            <input class="form-date__input calendar" type="text" id="datepicker-from" placeholder="07 февраля" />
+          </div>
+        </div>
+        <div class="form-date__item">
+          <label class="form-date__title form__title" for="datepicker-to">Выезд</label>
+          <div class="form-input__wrapper">
+            <input class="form-date__input arrow-down" type="text" id="datepicker-to" placeholder="29 февраля" />
+          </div>
+        </div>
+      </div>
+
+      <!-- numbers -->
+      <div class="form-item__numbers">
+        <div class="form__item form__item-number">
+          <label for="rooms" class="form__title">Номера</label>
+          <input class="form__number" type="text" id="rooms" name="rooms" placeholder="1" />
+        </div>
+        <div class="form__item form__item-number">
+          <label for="adults" class="form__title">Взрослые</label>
+          <input class="form__number" type="text" id="adults" name="adults" placeholder="1" />
+        </div>
+        <div class="form__item form__item-number">
+          <label for="children" class="form__title">Дети</label>
+          <input class="form__number" type="text" id="children" name="children" placeholder="0" />
+        </div>
+      </div>
+
+      <!-- button -->
+      <div class="form-item__btns">
+        
+          <button class="form__btn form__btn--small" type="button">+</button>
+       
+        
+          <button class="form__btn" type="submit">найти</button>
+       
+    </form>
+      </div>
+
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./jquery/js.js"></script>
+
+</html>

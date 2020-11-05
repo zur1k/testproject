@@ -1,0 +1,416 @@
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.form {
+  &__items {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__title {
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 14px;
+    font-family: "Fira Sans", sans-serif;
+    color: #232323;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+  }
+  &__location {
+    max-width: 320px;
+    margin-right: 00px;
+  }
+  &__location::placeholder {
+    width: 100%;
+    opacity: 0.7;
+  }
+  &-location__items {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__location,
+  &__date {
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 18px;
+  }
+
+  // date !
+
+  &__date {
+    max-width: 100px;
+    color: #383838;
+  }
+
+  &-date__items {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &-date__item {
+    max-width: 135px;
+  }
+  &-date__item:first-child {
+    padding-left: 0;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 30px;
+      width: 2px;
+      background-color: #e9e9ea;
+      bottom: 0;
+      left: 0;
+      display: none;
+    }
+  }
+
+  &-date__item:last-child {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 30px;
+      width: 2px;
+      background-color: #e9e9ea;
+      bottom: 0;
+      right: 0;
+      display: none;
+    }
+  }
+  &-date__input {
+    color: #232323;
+    max-width: 130px;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 18px;
+    padding-right: 0px;
+  }
+
+  // date  end !!
+  &-item__numbers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__item-number {
+    margin-left: 18px;
+    width: 28%;
+
+    .form__title {
+      margin-left: 5px;
+      margin-bottom: 6px;
+      text-align: start;
+    }
+  }
+  &__number {
+    max-width: 29px;
+    text-align: center;
+    outline: 1px solid #8b9198;
+  }
+  &__number::placeholder {
+    color: #8b9198;
+  }
+  &-item__btns {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__btn {
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #fff;
+    text-shadow: 0px 0px 6.96px rgba(0, 0, 0, 0.05);
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    padding: 23px 0;
+    background-color: rgb(237, 153, 21);
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  &__btn--small {
+    padding: 0;
+    height: 35px;
+    width: 35px;
+    box-shadow: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #fed18c;
+    margin: 0 0 20px 0;
+  }
+}
+
+// псевдоэлементы  и бекграунд картинки
+.geo {
+  background-image: url(../images/geo.png);
+  background-repeat: no-repeat;
+  color: #6b6b6b;
+  max-width: 210px;
+  text-align: center;
+  padding-left: 20px;
+}
+.calendar {
+  background-image: url(../images/calendar.png);
+  background-repeat: no-repeat;
+  padding-left: 25px;
+}
+.arrow-down::placeholder {
+  background-image: url(../images/arrow-down.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-position-x: 93%;
+}
+.dot {
+  position: relative;
+  &::after {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-image: url(../images/dot.png);
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 5px;
+  }
+}
+// псевдоэлементы  и бекграунд картинки
+
+.form__items .my-spinner {
+  border: none;
+}
+body .form__items .my-spinner .my-btn .my-btn,
+.my-btn-up {
+  background: url(../images/totop.png) transparent no-repeat center;
+  border: none;
+  &:hover {
+    background: url(../images/totop.png) transparent no-repeat center;
+    border: none;
+  }
+}
+.form__items .my-spinner .my-btn .my-btn,
+.my-btn-down {
+  background: url(../images/tobottom.png) #fff no-repeat center;
+  border: none;
+  &:hover {
+    background: url(../images/tobottom.png) transparent no-repeat center;
+    border: none;
+  }
+}
+
+.form__items .my-spinner .my-btn .my-btn,
+.my-btn-up {
+  span {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .form__btn {
+    width: 60%;
+  }
+  .form__btn--small {
+    width: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-item__btns {
+    display: flex;
+    width: 60%;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .form__btn--small {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .form {
+    &__items {
+      padding: 15px 13px 15px 35px;
+      flex-wrap: inherit;
+    }
+    &__title {
+
+      font-size: 12px;
+      font-family: "Fira Sans", sans-serif;
+      color: #232323;
+      font-weight: 500;
+      text-align: start;
+      width: auto;
+    }
+    &__location {
+      max-width: 210px;
+      margin-right: 10px;
+    }
+    &__location::placeholder {
+      width: 90%;
+      padding-left: 8%;
+    }
+    &-location__items {
+      width: auto;
+      margin-bottom: 0;
+      text-align: start;
+    }
+
+    &-date__items {
+      margin-bottom: 0;
+    }
+    &-date__item {
+      max-width: 185px;
+    }
+    &-date__item:first-child {
+      padding-left: 25px;
+      &::before {
+        display: block;
+      }
+    }
+
+    &-date__item:last-child {
+      padding-left: 20px;
+      &::before {
+        display: block;
+      }
+    }
+    &-date__input {
+      max-width: 160px;
+      padding-right: 30px;
+    }
+
+    // date  end !!
+
+    &-item__numbers {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0;
+      justify-content: center;
+    }
+
+    &__item-number {
+      margin-left: 5px;
+
+      .form__title {
+        margin-bottom: 3px;
+        margin-left: 4px;
+        text-align: center;
+      }
+    }
+    &__number::placeholder {
+      color: #8b9198;
+    }
+    &-item__btns {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      width: auto;
+    }
+    &__btn {
+      width: auto;
+      outline: none;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #fff;
+      text-shadow: 0px 0px 6.96px rgba(0, 0, 0, 0.05);
+      text-transform: uppercase;
+      font-weight: 700;
+      border: none;
+      padding: 23px 58px;
+      background-color: rgb(237, 153, 21);
+      box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.09);
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    &__btn--small {
+      padding: 0;
+      height: 35px;
+      width: 35px;
+      box-shadow: none;
+      border-radius: 50%;
+      color: #fff;
+      background-color: #fed18c;
+      margin: 0 15px 0 0;
+    }
+  }
+
+  // псевдоэлементы  и бекграунд картинки
+  .geo {
+    background-image: url(../images/geo.png);
+    background-repeat: no-repeat;
+    color: #6b6b6b;
+    padding-left: 20px;
+  }
+  .calendar {
+    background-image: url(../images/calendar.png);
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+  .arrow-down::placeholder {
+    background-image: url(../images/arrow-down.png);
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .dot {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 4px;
+      height: 4px;
+      background-image: url(../images/dot.png);
+      background-repeat: no-repeat;
+      right: 0;
+      bottom: 5px;
+      display: block;
+    }
+  }
+  // псевдоэлементы  и бекграунд картинки
+
+  .form__items .my-spinner {
+    border: none;
+  }
+  body .form__items .my-spinner .my-btn .my-btn,
+  .my-btn-up {
+    background: url(../images/totop.png) transparent no-repeat center;
+    border: none;
+    &:hover {
+      background: url(../images/totop.png) transparent no-repeat center;
+      border: none;
+    }
+  }
+  .form__items .my-spinner .my-btn .my-btn,
+  .my-btn-down {
+    background: url(../images/tobottom.png) #fff no-repeat center;
+    border: none;
+    &:hover {
+      background: url(../images/tobottom.png) transparent no-repeat center;
+      border: none;
+    }
+  }
+
+  .form__items .my-spinner .my-btn .my-btn,
+  .my-btn-up {
+    span {
+      display: none;
+    }
+  }
+}
